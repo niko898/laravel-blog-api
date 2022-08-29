@@ -27,6 +27,7 @@ RUN curl --silent -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.3/i
 RUN . ~/.nvm/nvm.sh && nvm install node
 # confirm installation
 
+RUN chown -R www-data:www-data /var/www
 
 CMD ["php-fpm"]
 EXPOSE 9000
