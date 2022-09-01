@@ -13,3 +13,10 @@ git push -u origin master
 
 
 composer create-project laravel/laravel blog-api
+
+
+php artisan make:model Post -m
+
+php artisan migrate
+
+php artisan make:controller Api\\PostController --model=Post

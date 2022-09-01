@@ -10,7 +10,7 @@ RUN docker-php-ext-install -j$(nproc) iconv  \
         && docker-php-ext-configure gd --with-freetype --with-jpeg \
         && docker-php-ext-install -j$(nproc) gd
 
-RUN docker-php-ext-install -j$(nproc) mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-install -j$(nproc) zip
 
 # Install composer
