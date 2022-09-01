@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePostRequest;
 
 class PostController extends Controller
 {
@@ -37,9 +38,14 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePostRequest $request)
     {
-        $post = Post::create($request->all());
+
+    	$validate = $request->validated($request->all());
+
+    	$cleanPost = $request->safe()->only(['title','body']);
+
+        $post = Post::create($cleanPost);
 
         return response()->json([
         	'message' => 'Post saved',

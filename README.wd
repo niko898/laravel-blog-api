@@ -20,3 +20,5 @@ php artisan make:model Post -m
 php artisan migrate
 
 php artisan make:controller Api\\PostController --model=Post
+
+php artisan make:request StorePostRequest
