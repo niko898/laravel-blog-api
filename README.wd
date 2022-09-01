@@ -22,3 +22,7 @@ php artisan migrate
 php artisan make:controller Api\\PostController --model=Post
 
 php artisan make:request StorePostRequest
+
+php artisan make:controller Api\\AuthController
+
+php artisan make:migration update_personal_tokens
