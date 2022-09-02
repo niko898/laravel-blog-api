@@ -7,108 +7,273 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8282/api/post/",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8282/api/post/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8282",
-					"path": [
-						"api",
-						"post",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8282/api/post/",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\":\"This is a test title\",\r\n    \"body\":\"This is the body\"\r\n}"
+			"name": "Posts",
+			"item": [
+				{
+					"name": "http://localhost:8282/api/post/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HDux2LlZjPesZYkJRFZYXeAPNkXOFZd1eNv2ArV5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8282/api/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8282/api/post/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8282",
-					"path": [
-						"api",
-						"post",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8282/api/post/2",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"body\":\"another text update!\"\r\n}"
+				{
+					"name": "http://localhost:8282/api/post/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HDux2LlZjPesZYkJRFZYXeAPNkXOFZd1eNv2ArV5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title txt2\",\r\n    \"body\":\"This is the body\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8282/api/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:8282/api/post/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8282",
-					"path": [
-						"api",
-						"post",
-						"2"
-					]
+				{
+					"name": "http://localhost:8282/api/post/2",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"body\":\"another text update!\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8282/api/post/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"post",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8282/api/post/2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8282/api/post/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"post",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8282/api/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Niko",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "wildniko88@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8282/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "http://localhost:8282/api/post/2",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8282/api/post/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8282",
-					"path": [
-						"api",
-						"post",
-						"2"
-					]
+			"name": "Comments",
+			"item": [
+				{
+					"name": "http://localhost:8282/api/comment/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HDux2LlZjPesZYkJRFZYXeAPNkXOFZd1eNv2ArV5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8282/api/comment/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"comment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8282/api/post/ Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "HDux2LlZjPesZYkJRFZYXeAPNkXOFZd1eNv2ArV5",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"title txt2\",\r\n    \"body\":\"This is the body\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8282/api/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8282",
+							"path": [
+								"api",
+								"post",
+								""
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
