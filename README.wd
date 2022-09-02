@@ -50,3 +50,8 @@ php artisan tinker
 	$post->comment()->get();
 
 	$post = Post::with('comment')->get();
+
+
+php artisan make:resource PostResource
+
+php artisan make:resource CommentResource
