@@ -26,3 +26,27 @@ php artisan make:request StorePostRequest
 php artisan make:controller Api\\AuthController
 
 php artisan make:migration update_personal_tokens
+
+
+php artisan make:model Comment -m
+
+(with tinker we will add the new line in the database by console)
+php artisan tinker
+	use App\Models\Comment;
+	$comment = New Comment;
+
+	$comment->post_id = 2;
+
+	$comment->user_id = 1;
+
+	$comment->body = 'this a test comment';
+
+	$comment->save();
+
+
+	use App\Models\Post;
+	$post = Post::find(1);
+
+	$post->comment()->get();
+
+	$post = Post::with('comment')->get();
