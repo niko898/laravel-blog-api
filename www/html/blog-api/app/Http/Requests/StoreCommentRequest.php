@@ -25,6 +25,7 @@ class StoreCommentRequest extends FormRequest
     {
 		return [
 			'post_id' => 'required|integer',
+			'user_id' => 'required|integer',
 			'body' => 'required',
 		];
     }
@@ -34,6 +35,8 @@ class StoreCommentRequest extends FormRequest
 		return [
 			'post_id.required' => 'post_id is required',
 			'post_id.integer' => 'post_id must be numeric data',
+			'user_id.required' => 'user_id is required',
+			'user_id.integer' => 'user_id must be numeric data',
 			'body.required' => 'body is required',
 		];
 	}

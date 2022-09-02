@@ -44,7 +44,7 @@ class CommentController extends Controller
     {
 		$validate = $request->validated($request->all());
 
-		$cleanPost = $request->safe()->only(['post_id', 'body']);
+		$cleanPost = $request->safe()->only(['post_id', 'user_id', 'body']);
 
 		$comment = Comment::create($cleanPost);
 
