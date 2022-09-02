@@ -55,3 +55,12 @@ php artisan tinker
 php artisan make:resource PostResource
 
 php artisan make:resource CommentResource
+
+
+
+
+MINE
+
+php artisan make:controller Api\\CommentController --model=Comment
+
+php artisan make:request StoreCommentRequest
